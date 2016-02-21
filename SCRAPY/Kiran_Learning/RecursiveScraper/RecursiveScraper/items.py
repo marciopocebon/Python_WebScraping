@@ -5,16 +5,12 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-
 from scrapy.item import Item, Field
 
 
-class ScrapscrapyItem(Item):
+class RecursivescraperItem(Item):
     # define the fields for your item here like:
-    # name = Field()
-    Heading = Field ()
-    Content = Field ()
-    Source_Website = Field ()
+    # name = scrapy.Field()
+    URL = Field()
+    content = Field()
     pass
-
-
