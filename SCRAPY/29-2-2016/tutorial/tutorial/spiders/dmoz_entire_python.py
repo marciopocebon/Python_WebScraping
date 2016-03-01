@@ -5,9 +5,7 @@ from tutorial.items import DmozItem
 class DmozSpider(scrapy.Spider):
     name = "dmoz_full"
     allowed_domains = ["dmoz.org"]
-    start_urls = [
-        "http://www.dmoz.org/Computers/Programming/Languages/Python/",
-    ]
+    start_urls = ["http://www.dmoz.org/Computers/Programming/Languages/Python/"]    ]
 
     def parse(self, response):
         for href in response.css("ul.directory.dir-col > li > a::attr('href')"):
@@ -21,3 +19,4 @@ class DmozSpider(scrapy.Spider):
             item['link'] = sel.xpath('a/@href').extract()
             item['desc'] = sel.xpath('text()').extract()
             yield item
+    
