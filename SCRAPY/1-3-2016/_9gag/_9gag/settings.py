@@ -14,20 +14,20 @@ BOT_NAME = '_9gag'
 SPIDER_MODULES = ['_9gag.spiders']
 NEWSPIDER_MODULE = '_9gag.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = '_9gag (+http://www.yourdomain.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS=32
+CONCURRENT_REQUESTS=640
+LOG_ENABLED = False
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY=3
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN=16
-#CONCURRENT_REQUESTS_PER_IP=16
+CONCURRENT_REQUESTS_PER_DOMAIN=100
+CONCURRENT_REQUESTS_PER_IP=1000
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED=False
@@ -78,7 +78,7 @@ NEWSPIDER_MODULE = '_9gag.spiders'
 
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED=True
+HTTPCACHE_ENABLED=True
 #HTTPCACHE_EXPIRATION_SECS=0
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
